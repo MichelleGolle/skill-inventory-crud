@@ -3,4 +3,7 @@ skills:
 - id: 1
   title: a
   description: bcdef
-total: 1
+- id: 2
+  title: '1'
+  description: '23'
+total: 2
