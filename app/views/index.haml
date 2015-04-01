@@ -1,0 +1,10 @@
+%h1 My Skills
+- @skills.each do |skill|
+  %h3
+    = skill.id
+    \:
+    %a{:href => "/skills/#{skill.id}"}= skill.title
+  %a{:href => "/skills/#{skill.id}/edit"} Edit
+  %form{:action => "/skills/#{skill.id}", :method => "POST"}
+    %input{:name => "_method", :type => "hidden", :value => "DELETE"}
+      %input{:type => "submit", :value => "delete"}/

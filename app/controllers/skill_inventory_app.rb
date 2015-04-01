@@ -5,16 +5,16 @@ class SkillInventoryApp < Sinatra::Base
   set :method_override, true
 
   get '/' do
-   erb :dashboard
+   haml :dashboard
   end
 
   get '/skills' do
     @skills = SkillInventory.all
-    erb :index
+    haml :index
   end
 
   get '/skills/new' do
-    erb :new
+    haml :new
   end
 
   post '/skills' do
@@ -24,12 +24,12 @@ class SkillInventoryApp < Sinatra::Base
 
   get '/skills/:id' do |id|
     @skill = SkillInventory.find(id.to_i)
-    erb :show
+    haml :show
   end
 
   get '/skills/:id/edit' do |id|
     @skill = SkillInventory.find(id.to_i)
-    erb :edit
+    haml :edit
   end
 
   put '/skills/:id' do |id|
@@ -43,7 +43,7 @@ class SkillInventoryApp < Sinatra::Base
   end
 
   not_found do
-    erb :error
+    haml :error
   end
 
 end

@@ -1,0 +1,8 @@
+%form{:action => "/skills/#{@skill.id}", :method => "post"}
+  %p Edit
+  %input{:name => "_method", :type => "hidden", :value => "PUT"}/
+  %input{:name => "skill[title]", :type => "text", :value => @skill.title}/
+  %br/
+  %textarea{:name => "skill[description]"}= @skill.description
+  %br/
+  %input{:type => "submit"}/
