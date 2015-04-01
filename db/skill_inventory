@@ -1,8 +1,5 @@
 ---
 skills:
-- id: 1
-  title: a
-  description: bcdef
 - id: 2
   title: '1'
   description: '23'
